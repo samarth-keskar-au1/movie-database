@@ -1,8 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
 import { debounce } from "underscore";
-const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.DB_API_KEY}`;
+const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_DB_API_KEY}`;
 
 const useDebouncedFetch = (urlParams, firstFetch) => {
+  console.log(process.env);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState({ show: false, msg: "" });
   const [data, setData] = useState(null);
