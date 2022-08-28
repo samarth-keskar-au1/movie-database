@@ -36,7 +36,6 @@ const useDebouncedFetch = (urlParams, firstFetch) => {
     if (!urlParams) {
       return;
     }
-
     setIsLoading(true);
     firstFetch
       ? fetchMovies(`${API_ENDPOINT}${urlParams}`)
